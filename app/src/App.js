@@ -37,6 +37,7 @@ function App() {
 			for (let i = 0; i < len; i++)
 				pass += String.fromCharCode(shifted[i]);
 		}
+		// I could fix this to make it more efficient. But I'm lazy rn so.
 		regex.test(pass) ? setState(pass) : generate();
 	}
 
