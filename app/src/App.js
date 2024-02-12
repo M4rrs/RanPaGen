@@ -44,7 +44,7 @@ function App() {
 	return (
 		<div id="main">
 			<div id="word">
-				<h1>RanPaGen</h1>
+				<h1>/ᐠ - ˕ -マ RanPaGen /ᐠ - ˕ -マ</h1>
 				<p>Mars' Random Password Generator</p>
 				<p>because I don't trust existing ones.</p>
 				<div id="butt">
