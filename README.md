@@ -11,3 +11,5 @@ But it works, so I think it's good enough for now.
 
 #### Plans to improve
 - Option to copy generated password
+- Character options
+- Password length

@@ -1,5 +1,9 @@
 import './App.css';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCopy } from '@fortawesome/free-solid-svg-icons';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 	const [state, setState] = useState("");
@@ -41,6 +45,13 @@ function App() {
 		regex.test(pass) ? setState(pass) : generate();
 	}
 
+	const copy = () => {
+		const text = document.getElementById('text');
+
+		navigator.clipboard.writeText(text.textContent);
+		toast("Copied to clipboard!");
+	}
+
 	return (
 		<div id="main">
 			<div id="word">
@@ -50,7 +61,14 @@ function App() {
 				<div id="butt">
 					<button className="button" onClick={generate}>Generate</button>
 				</div>
-				<h3>{state}</h3>
+				<div id="pass">
+					<h3 style={{paddingRight: '20px'}} id="text">{state}</h3>
+					{state && <FontAwesomeIcon icon={faCopy} onClick={copy}/>}
+					<ToastContainer
+						autoClose={2000}
+						style={{ background: '#000000' }}
+					/>
+				</div>
 			</div>
 		</div>
 	);

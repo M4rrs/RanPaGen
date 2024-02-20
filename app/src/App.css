@@ -25,6 +25,11 @@ h3 { color: #ff4444;}
 	padding: 20px;
 }
 
+#pass {
+	flex-direction: row;
+	justify-content: space-between;
+}
+
 /* =========================================================== */
 
 .button {
